@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <div class="wrap">
+            <section class="heading">
+                <p class="title">Task manager</p>
+                <p class="subtitle">Manage And Search Your Pending Tasks in Click</p>
+            </section>
+            <section class="task-manager">
+                <div class="search-box">
+                    <form class="search">
+                        <input type="text" name="task" placeholder="search task" autocomplete="off">
+                        <i class="bi bi-x-octagon reset"></i>
+                    </form>
+                </div>
+                <div class="task-box">
+                    <ul class="task">
+                        <li>
+                            <span>task 1</span>
+                            <i class="bi bi-trash delete"></i>
+                        </li>
+                        <li><span>task 2</span>
+                            <i class="bi bi-trash delete"></i>
+                        </li>
+                        <li><span>task 3</span>
+                            <i class="bi bi-trash delete"></i>
+                        </li>
+                    </ul>
+                    <form class="add">
+                        <input type="text" name="task" placeholder="add task " autocomplete="off">
+                        <input type="submit" value="add">
+                    </form>
+                </div>
+                <div class="message">
+                    <span> You have 3 task pending</span>
+                    <button class="clear">clear All</button>
+                </div>
+
+            </section>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

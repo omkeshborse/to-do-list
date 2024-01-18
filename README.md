@@ -6,7 +6,7 @@
 
 ## 📗 Table of Contents
 
-- [📖 To Do List](#-to-do-list)
+- [📖 To Do List](#-task-manager)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -17,9 +17,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
 
 
-# 📖 Task manager <a name="about-project"></a>
+# 📖 Task manager 
 
-A tool that helps to organize your day. Task manager list is a set of tasks that each render on a separate line with a clickable checkbox. You can select or deselect the checkboxes to mark the tasks as complete or incomplete.
+A tool that helps to organize your day. Task manager list is a set of tasks that each render on a separate . you can add task  , deleted task , clear all task as well as search task in task manager .
 
 
 ![screenshot](images/list.png)
@@ -53,7 +53,7 @@ To get started with this project, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/omkeshborse/to-do-list/tree/main
+git clone https://github.com/omkeshborse/to-do-list.git
 ```
 
 2. Open the project in your preferred code editor.

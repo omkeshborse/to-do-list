@@ -38,21 +38,31 @@ clearAll.addEventListener("click", (e) => {
 function filterTask(term) {
   const list = Array.from(tasks.children)
     .filter((task) => {
-      return !task.textContent.includes(term);
+      return !task.textContent.toLowerCase().includes(term);
     })
     .forEach((task) => {
       task.classList.add("hide");
     });
 
-    Array.from(tasks.children).filter((task)=>{
-      return task.textContent.includes(term) 
-    }).forEach((task)=>{
-      task.classList.remove("hide");
+  Array.from(tasks.children)
+    .filter((task) => {
+      return task.textContent.toLowerCase().includes(term);
     })
+    .forEach((task) => {
+      task.classList.remove("hide");
+    });
 }
 
 searchForm.addEventListener("keyup", (e) => {
-  const term = searchForm.task.value.trim();
-
+  const term = searchForm.task.value.trim().toLowerCase();
+  console.log(term);
   filterTask(term);
+});
+
+searchForm.addEventListener("click", (e) => {
+  if (e.target.classList.contains("reset")) {
+    searchForm.reset();
+    const term = searchForm.task.value.trim();
+    filterTask(term);
+  }
 });

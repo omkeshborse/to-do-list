@@ -55,7 +55,6 @@ function filterTask(term) {
 
 searchForm.addEventListener("keyup", (e) => {
   const term = searchForm.task.value.trim().toLowerCase();
-  console.log(term);
   filterTask(term);
 });
 

@@ -2,6 +2,7 @@ const addForm = document.querySelector(".add");
 const tasks = document.querySelector(".task");
 const clearAll = document.querySelector(".clear");
 const messageSpan = document.querySelector(".message span");
+const searchForm = document.querySelector(".search");
 
 function updatedMessage() {
   const tasksLength = tasks.children.length;
@@ -33,4 +34,25 @@ clearAll.addEventListener("click", (e) => {
     task.remove();
     updatedMessage();
   });
+});
+function filterTask(term) {
+  const list = Array.from(tasks.children)
+    .filter((task) => {
+      return !task.textContent.includes(term);
+    })
+    .forEach((task) => {
+      task.classList.add("hide");
+    });
+
+    Array.from(tasks.children).filter((task)=>{
+      return task.textContent.includes(term) 
+    }).forEach((task)=>{
+      task.classList.remove("hide");
+    })
+}
+
+searchForm.addEventListener("keyup", (e) => {
+  const term = searchForm.task.value.trim();
+
+  filterTask(term);
 });
